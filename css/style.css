@@ -13,3 +13,17 @@
 .my-card{
     height: calc(100% / 5);
 }
+
+.previous, .next{
+    cursor: pointer;
+}
+
+.carousel-element{
+    display: none;
+    overflow: hidden;
+    height: 100%;
+}
+
+.carousel-element.active{
+    display:block;
+}
