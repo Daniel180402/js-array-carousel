@@ -41,14 +41,18 @@ const previousButton = document.querySelector('div.previous');
 
 let activeElement = 0;
 
+document.getElementsByClassName('my-card')[activeElement].classList.add('active');
+
 nextButton.addEventListener('click', function() {
     if(activeElement == 4){
         console.log("sei già all'ultima immagine");
     }
     else{
         carouselElements[activeElement].classList.remove('active');
+        document.getElementsByClassName('my-card')[activeElement].classList.remove('active');
         activeElement++;
         carouselElements[activeElement].classList.add('active');
+        document.getElementsByClassName('my-card')[activeElement].classList.add('active');
     }
 });
 
@@ -58,8 +62,10 @@ previousButton.addEventListener('click', function() {
     }
     else{
         carouselElements[activeElement].classList.remove('active');
+        document.getElementsByClassName('my-card')[activeElement].classList.remove('active');
         activeElement--; 
         carouselElements[activeElement].classList.add('active');
+        document.getElementsByClassName('my-card')[activeElement].classList.add('active');
     }
     
     
